@@ -1,0 +1,122 @@
+.menu-icon {
+    display: none;
+}
+
+.navbar {
+    height: auto;
+    background-color: rgb(8, 8, 48);
+    position: relative;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.logo-heading {
+    color: white;
+}
+
+span {
+    color: lightblue;
+}
+
+.nav-elements ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav-elements ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-right: 25px;
+}
+
+.nav-elements ul a {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-elements ul li i {
+    font-size: 25px;
+    color: white;
+    margin-right: 10px;
+}
+
+.nav-elements ul li a::after {
+    content: "";
+    width: 0%;
+    background-color: white;
+    height: 3px;
+    display: flex;
+    transition: 0.4s;
+
+}
+
+.nav-elements ul li a:hover::after {
+
+    width: 100%;
+
+
+}
+
+.nav-elements ul a.active {
+    color: rgb(34, 192, 245);
+}
+
+
+/* =============================================================================================== */
+
+
+@media (max-width : 700px) {
+    .nav-container {
+        padding: 5.5vw;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: 35px;
+        z-index: 4;
+    }
+
+    .nav-elements {
+        position: absolute;
+        width: 0px;
+        /* */
+        height: 100vh;
+        right: 0%;
+        top: 0%;
+        overflow: hidden;
+        transition: 0.3s ease-in;
+    }
+
+    .nav-elements.active {
+        width: 200px;
+        background-color: rgb(18, 18, 65);
+
+        transition: 0.8s;
+    }
+
+    .nav-elements ul {
+        display: flex;
+        flex-direction: column;
+       margin-top: 10vh;
+       padding-left: 20px;
+        
+    }
+    .nav-elements ul li{
+        margin-right: auto;
+        margin-top: 22px;
+    }
+    
+
+}
